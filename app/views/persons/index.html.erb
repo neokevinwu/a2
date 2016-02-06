@@ -1,0 +1,41 @@
+<body>
+  <h1>Listing People</h1>
+  
+  <%= link_to 'New person', new_person_path %>
+   
+  <table class="relative">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Color</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+   </thead>
+   
+   <tbody>
+    <% @persons.each do |person| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= person.name %></td>
+        <td><%= person.weight %></td>
+        <td><%= person.height %></td>
+        <td><%= person.color %></td>
+        <td><%= link_to 'Show', person_path(person) %></td>
+        <td><%= link_to 'Edit', edit_person_path(person) %></td>
+        <td><%= link_to 'Destroy', person_path(person),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+      <!--Display diagrams-->
+      <p class="absolute" style="margin: 10px; width: <%= person.weight %>; height: <%= person.height %>; background-color: <%= person.color%>;"> <%= person.name %></p>
+
+    <% end %>
+    </tbody>
+    
+  </table>
+  
+<body>

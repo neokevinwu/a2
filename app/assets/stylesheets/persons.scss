@@ -1,0 +1,47 @@
+// Place all the styles related to the persons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*setting font, and background colour*/
+body 
+{
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	font-stretch: semi-condensed;
+}
+
+table tr td {
+    border: 1px solid #bbb;
+	padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    text-align: left;
+    background: #00308f;
+    color: #FFF;
+}
+
+thead th {
+    padding: 10px;
+}
+
+.list_line_even {
+    background-color: #faebd7;
+}
+
+.list_line_odd {
+    background-color: #fefefa;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 200px;
+}
